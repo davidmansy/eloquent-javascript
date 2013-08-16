@@ -1,8 +1,10 @@
-Hello,
+Hi,
 
-I am reading the eloquentjavascript.net website and each time there is an exercise, I write the code myself without looking at the proposed solution. Finally I compare my code with the solution and upgrade my code if needed.
+I read the 6 first chapters of eloquentjavascript.net website and each time there was an exercise, I wrote the code myself without looking at the proposed solution. Finally I compared my code with the solution and upgraded my code if needed.
 
 I enjoy keeping a trace on github of this journey.
 
+I was not really convinced by the chapter about object-oriented programming and specially the short and confusing explanations about prototypes, so I switched to the book "Secrets of the Javascript Ninja". If you are a JavaScript beginner like me, reading the part 2 "Apprentice training" related to functions, closures and objects will finally make it clear.
+	
 Regards
 David

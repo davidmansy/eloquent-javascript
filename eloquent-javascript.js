@@ -1,6 +1,7 @@
 //Main JavaScript program
 window.onload = function() {
-	//chapter2();
-	//chapter3();
+	chapter2();
+	chapter3();
 	chapter4();
+	chapter6();
 }
