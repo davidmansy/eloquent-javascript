@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<title>Eloquent JavaScript</title>		
+		<link rel="stylesheet" type="text/css" href="eloquent-javascript.css">
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 		<script type="text/javascript" src="helper.js"></script>
 		<script type="text/javascript" src="chapter2.js"></script>
 		<script type="text/javascript" src="chapter3.js"></script>
@@ -10,13 +13,49 @@
 		<script type="text/javascript" src="eloquent-javascript.js"></script>
 	</head>
 	<body>
-		<h2>Chapter 2</h2>
-		<div id="chapter2"></div>
-		<h2>Chapter 3</h2>
-		<div id="chapter3"></div>
-		<h2>Chapter 4</h2>
-		<div id="chapter4"></div>
-		<h2>Chapter 6</h2>
-		<div id="chapter6"></div>
+		<div class="chapter">
+			<button>Chapter 2</button>
+			<ul class="exercice">
+				<li><a href="#" data-exercice="2_2">Exercice 2.2: Calculate the value of 2exp10 using while loop</a></li>
+				<li><a href="#" data-exercice="2_3">Exercice 2.3: Draw a triangle using a while loop</a></li>
+				<li><a href="#" data-exercice="2_4a">Exercice 2.4a: Calculate the value of 2exp10 using for loop</a></li>
+				<li><a href="#" data-exercice="2_4b">Exercice 2.4a: Draw a triangle using for loop</a></li>
+				<li><a href="#" data-exercice="2_5">Exercice 2.5: Ask yourself, using prompt, what the value of 2 + 2 is</a></li>
+				<li><a href="#" data-exercice="2_6">Exercice 2.6: Ask yourself, using prompt, what the value of 2 + 2 is, with loop</a></li>
+			</ul>			
+		</div>
+		<div class="chapter">
+			<button>Chapter 3</button>
+			<ul class="exercice">
+				<li><a href="#" data-exercice="3_1">Exercice 3.1: Returns the absolute value of the number it is given</a></li>
+				<li><a href="#" data-exercice="3_2">Exercice 3.2: Write a function greaterThan using a closure</a></li>
+			</ul>
+		</div>
+		<div class="chapter">
+			<button>Chapter 4</button>
+			<ul class="exercice">
+				<li><a href="#" data-exercice="4_1">Exercice 4.1: If names are strings, can you think of a way to use an object to represent a set of names?</a></li>
+				<li><a href="#" data-exercice="4_2">Exercice 4.2: Write a function range that takes one argument, a positive number, and returns an array containing all numbers from 0 up to and including the given number.</a></li>
+				<li><a href="#" data-exercice="4_3">Exercice 4.3: Can you give an example of an array where .join(" ").split(" ") produces a different value?</a></li>
+				<li><a href="#" data-exercice="4_4">Exercice 4.4: Write a function called startsWith that takes two arguments, both strings. It returns true when the first argument starts with the characters in the second argument</a></li>
+				<li><a href="#" data-exercice="4_5">Exercice 4.5: Can you write a function catNames that takes a paragraph as an argument and returns an array of names?</a></li>
+				<li><a href="#" data-exercice="4_6">Exercice 4.6: Write a function extractDate that takes such a paragraph as its argument, extracts the date, and returns it as a date object.</a></li>
+				<li><a href="#" data-exercice="4_7">Exercice 4.7: Write a function extractDate that takes such a paragraph as its argument, extracts the date, and returns it as a date object.</a></li>
+				<li><a href="#" data-exercice="4_8">Exercice 4.8: The formatDate function used by catInfo does not add a zero before the month and the day part when these are only one digit long. Write a new version that does this.</a></li>
+				<li><a href="#" data-exercice="4_9">Exercice 4.9: Write a function oldestCat which, given an object containing cats as its argument, returns the name of the oldest living cat.</a></li>
+				<li><a href="#" data-exercice="4_10">Exercice 4.10: Extend the range function from exercise 4.2 to take a second, optional argument. If two arguments are given, the first indicates the start of the range, the second the end.</a></li>
+				<li><a href="#" data-exercice="4_11">Exercice 4.11: This function takes an array of numbers, and returns their sum. Write it, it should be easy.</a></li>
+			</ul>
+		</div>
+		<div class="chapter">
+			<button>Chapter 6</button>
+			<ul class="exercice">
+				<li><a href="#" data-exercice="6_1a">Exercice 6.1a: Write a function countZeroes, which takes an array of numbers as its argument and returns the amount of zeroes that occur in it. Use reduce.</a></li>
+				<li><a href="#" data-exercice="6_1b">Exercice 6.1b: write the higher-order function count, which takes an array and a test function as arguments, and returns the amount of elements in the array for which the test function returned true.</a></li>
+				<li><a href="#" data-exercice="6_2">Exercice 6.2: Function that process a paragraph and return an object with type and content</a></li>
+				<li><a href="#" data-exercice="6_3">Exercice 6.3: Build a function splitParagraph which, given a paragraph string, returns an array of paragraph fragments.</a></li>
+				<li><a href="#" data-exercice="6_4">Exercice 6.4: write an image function which, when given the location of an image file, will create an img HTML element.</a></li>
+			</ul>
+		</div>
 	</body>
 </html>

@@ -1,5 +1,4 @@
-function chapter2() {
-
+function exercice2_2() {
 	//Eloquent JavaScript, Exercice 2.2
 	//Calculates and shows the value of 2exp10 using while loop
 	var count = 1;
@@ -9,47 +8,51 @@ function chapter2() {
 		result *= 2;
 		count++;
 	}
-	print("chapter2", "Exercice 2.2: Calculate the value of 2exp10 using while loop");
-	print("chapter2", result);
-	printbr("chapter2");
 
+	return [result];
+}
+
+function exercice2_3() {
 	//Eloquent JavaScript, Exercice 2.3
 	//Draw a triangle using a while loop
 	var line = "#";
 	count = 1;
-	print("chapter2", "Exercice 2.3: Draw a triangle using a while loop");
+	var result = [];
 
 	while (count <= 10) {
-		print("chapter2", line);
+		result.push(line);
 		line += "#";
 		count++;
 	}
-	printbr("chapter2");
+	return result;
+}
 
-	//Eloquent JavaScript, Exercice 2.4
-	//Calculates and shows the value of 2exp10 using for loop
+//Eloquent JavaScript, Exercice 2.4a
+//Calculates and shows the value of 2exp10 using for loop
+function exercice2_4a() {
 	result = 1
 	for(var count = 1; count <= 10; count++) {
 		result = result * 2;
 	}
-	print("chapter2", "Exercice 2.4a: Calculate the value of 2exp10 using for loop");
-	print("chapter2", result);
-	printbr("chapter2");
+	return [result];
+}
 
-	//Eloquent JavaScript, Exercice 2.4
-	//Draw a triangle using for loop
-	print("chapter2", "Exercice 2.4b: Draw a triangle using for loop");
-	line = "#"
+//Eloquent JavaScript, Exercice 2.4b
+//Draw a triangle using for loop
+function exercice2_4b() {
+	line = "#";
+	var result = [];
+
 	for(var count = 1; count <= 10; count++) {
-		print("chapter2", line);
+		result.push(line);
 		line += "#";
 	}
-	printbr("chapter2");
+	return result;
+}
 
+function exercice2_5() {
 	//Eloquent JavaScript, Exercice 2.5
 	//Ask yourself, using prompt, what the value of 2 + 2 is
-	print("chapter2", "Exercice 2.5: Ask yourself, using prompt, what the value of 2 + 2 is");
-	print("chapter2", "See the prompts");
 	var answer = prompt("What is 2 + 2?");
 	if (answer == 4) {
 		alert("You're a genius!");
@@ -58,12 +61,12 @@ function chapter2() {
 	} else {
 		alert("You're talking to me?");
 	}
-	printbr("chapter2");
+	return ["Check the prompts!"];
+}
 
+function exercice2_6() {
 	//Eloquent JavaScript, Exercice 2.6
 	//Ask yourself, using prompt, what the value of 2 + 2 is, with loop
-	print("chapter2", "Exercice 2.6: Ask yourself, using prompt, what the value of 2 + 2 is, with loop");
-	print("chapter2", "See the prompts again");
 	while(true) {
 		answer = prompt("What is 2 + 2");
 		if(answer == 4) {
@@ -74,7 +77,5 @@ function chapter2() {
 		else
 			alert("Think twice!");
 	}
-	printbr("chapter2");
-
+	return ["Check the prompts!"];
 }
-

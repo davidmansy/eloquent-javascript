@@ -1,18 +1,3 @@
-//Print function
-function print(id, content) {
-	document.getElementById(id).appendChild(document.createTextNode(content));
-	printbr(id);
-}
-
-function printbr(id) {
-	document.getElementById(id).appendChild(document.createElement("br"));
-}
-
-//HTML functions
-function tag(name, content, attributes) {
-  return {name: name, attributes: attributes, content: content};
-}
-
 //High-order functions
 
 //Loop over an array, each element of the array (array) serves as an input for a function (action)
@@ -54,3 +39,22 @@ function map(func, array) {
 	})
 	return result;
 }
+
+//If two arguments are given, the first indicates the start of the range, the second the end.
+function anotherRange(target, start) {
+
+	if (arguments.length == 1)
+		start = 0;
+
+	var result = [];
+	for (var i = start; i <= target; i++) {
+		result.push(i);
+	};
+	return result;
+}
+
+//HTML functions
+function tag(name, content, attributes) {
+  return {name: name, attributes: attributes, content: content};
+}
+

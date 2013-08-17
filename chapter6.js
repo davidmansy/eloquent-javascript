@@ -1,8 +1,7 @@
-function chapter6() {
+function exercice6_1a() {
 
 	//Eloquent JavaScript, Exercice 6.1a
 	//Write a function countZeroes, which takes an array of numbers as its argument and returns the amount of zeroes that occur in it. Use reduce.
-	print("chapter6", "Exercice 6.1a: Write a function countZeroes, which takes an array of numbers and returns the amount of zeroes that occur in it. Use reduce.");
 
 	function countZeroes(numbers) {
 		return reduce(counter, 0, numbers);
@@ -12,14 +11,17 @@ function chapter6() {
 		return total + (element === 0 ? 1 : 0);
 	}
 
-	print("chapter6", "There are " + countZeroes(helperRange(12)) + " zero(es) in the array [" + helperRange(12) + "]");
+	var printResult = [];
+	printResult.push("There are " + countZeroes(helperRange(12)) + " zero(es) in the array [" + helperRange(12) + "]");
 	var test = [0,0,0,0,1,1,1,1,1];
-	print("chapter6", "There are " + countZeroes(test) + " zero(es) in the array [" + test + "]");
-	printbr("chapter6");
+	printResult.push("There are " + countZeroes(test) + " zero(es) in the array [" + test + "]");
+	return printResult;
+}
+
+function exercice6_1b() {
 
 	//Eloquent JavaScript, Exercice 6.1b
 	//write the higher-order function count, which takes an array and a test function as arguments, and returns the amount of elements in the array for which the test function returned true.
-	print("chapter6", "Exercice 6.1b: write the higher-order function count, which takes an array and a test function as arguments, and returns the amount of elements in the array for which the test function returned true.");
 
 	function count(test, array) {
 		var total = 0;
@@ -38,15 +40,16 @@ function chapter6() {
 	function newCountZeroes(numbers) {
 		return count(equals(0), numbers);
 	}
-	print("chapter6", "There are " + newCountZeroes(test) + " zero(es) in the array [" + test + "]");
-	printbr("chapter6");
+	var test = [0,0,0,0,1,1,1,1,1];
+	return ["There are " + newCountZeroes(test) + " zero(es) in the array [" + test + "]"];
+}
 
+function exercice6_2() {
 	//Eloquent JavaScript, Exercice 6.2
 	//Write a function processParagraph that, when given a paragraph string as its argument, checks whether this 
 	//paragraph is a header. If it is, it strips off the '%' characters and counts their number. Then, it returns an object with 
 	//two properties, content, which contains the text inside the paragraph, and type, which contains the tag that this 
 	//paragraph must be wrapped in, "p" for regular paragraphs, "h1" for headers with one '%', and "hX" for headers with X '%' characters.
-	print("chapter6", "Exercice 6.2: Function that process a paragraph and return an object with type and content");
 
 	var paragraph1 = "%% Progression";
 
@@ -66,21 +69,23 @@ function chapter6() {
 
 	var para = processParagraph(paragraph1);
 
-	print("chapter6", para.type + ":" + para.content);
-	printbr("chapter6");
+	return ["'%% Progression' paragraph gives: " + para.type + ":" + para.content];
+}
+
+function exercice6_3() {
 
 	//Eloquent JavaScript, Exercice 6.3
 	//Build a function splitParagraph which, given a paragraph string, returns an array of paragraph fragments. Think of a good way to represent the fragments.
-	print("chapter6", "Exercice 6.3: Build a function splitParagraph which, given a paragraph string, returns an array of paragraph fragments. Think of a good way to represent the fragments.");
-	printbr("chapter6");
 	var paragraph3 = "{Test}Hello";
 	var paragraph4 = "Hello{Test}";
-	var paragraph5 = "A student had been sitting motionless behind his computer for hours, frowning darkly. He was trying to write a beautiful solution to a difficult problem, but could not find the right approach. Fu-Tzu hit him on the back of his head and shouted '*Type something!*' The student started writing an ugly solution. After he had finished, he suddenly understood the beautiful solution."
+	var paragraph5 = "A student had been sitting motionless behind his computer for hours, frowning darkly. He was trying to write a beautiful solution to a difficult problem, but could not find the right approach. Fu-Tzu hit him on the back of his head and shouted '*Type something!*' The student started writing an ugly solution. After he had finished, he suddenly understood the beautiful solution.";
+	var printResult = [];
 
+	printResult.push("Processing paragraph: " + paragraph5);
 	forEach(splitParagraph(paragraph5), function (element) {
-		print("chapter6", element.type + " : " + element.content);
-		printbr("chapter6");
+		printResult.push(element.type + " : " + element.content);
 	});
+	return printResult;
 
 	function splitParagraph(paragraph) {
 
@@ -118,20 +123,22 @@ function chapter6() {
 	  }
 	  return arrayOfFragments;
 	}
+}
 
+function exercice6_4() {
 	//Eloquent JavaScript, Exercice 6.4
 	//write an image function which, when given the location of an image file, will create an img HTML element.
-	print("chapter6", "Exercice 6.4: write an image function which, when given the location of an image file, will create an img HTML element.");
 	function image(file) {
 		return tag("img", [],{src: file});
 	}
 	var imageElement = image("test.png");
-	print("chapter6", imageElement.name + ": " + imageElement.attributes["src"]);
-	printbr("chapter6");
+	return [imageElement.name + ": " + imageElement.attributes["src"]];
+}
 
+function exercice6_5() {
 	//Eloquent JavaScript, Exercice 6.5
 	//TO BE CONTINUED!!!
-	print("chapter6", "Exercice 6.5: ");
+	printer.print("chapter6", "Exercice 6.5: ");
 
 	function renderFragment(fragment) {
 		if (fragment.type == "emphasized") {
@@ -145,5 +152,5 @@ function chapter6() {
 
 	function renderParagraph(paragraph) {
 		return tag(paragraph.type, map(renderFragment, paragraph.content));
-	}
+	}	
 }
